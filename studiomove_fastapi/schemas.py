@@ -10,4 +10,5 @@ class PatientSchema(BaseModel):
     aulas_por_semana: int
 
 
-
+class PatientSchemalist(BaseModel):
+    patient: list[PatientSchema]
