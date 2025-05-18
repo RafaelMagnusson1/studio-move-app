@@ -11,4 +11,15 @@ class PatientSchema(BaseModel):
 
 
 class PatientSchemalist(BaseModel):
-    patient: list[PatientSchema]
+    patients: list[PatientSchema]
+
+
+class SessionReportSchema(BaseModel):
+    paciente: PatientSchema
+    data_atendimento: str
+    professor: str
+    relatorio: str
+
+
+class SessionReportSchemaList(BaseModel):
+    reports: list[SessionReportSchema]

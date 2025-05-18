@@ -1,9 +1,10 @@
 import pytest
-from studiomove_fastapi.app import app
-from studiomove_fastapi.models import table_registry
 from fastapi.testclient import TestClient
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
+
+from studiomove_fastapi.app import app
+from studiomove_fastapi.models import table_registry
 
 
 @pytest.fixture
