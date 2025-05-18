@@ -3,8 +3,6 @@ from datetime import datetime
 from sqlalchemy import func
 from sqlalchemy.orm import Mapped, mapped_column, registry
 
-from studiomove_fastapi.schemas import PatientSchema
-
 table_registry = registry()
 
 
@@ -32,7 +30,7 @@ class SessionReport:
     __tablename__ = 'session_reports'
 
     id: Mapped[int] = mapped_column(init=False, primary_key=True)
-    patient: Mapped[PatientSchema]
+    paciente_id: Mapped[int]
     data_atendimento: Mapped[str]
     professor: Mapped[str]
     relatorio: Mapped[str]

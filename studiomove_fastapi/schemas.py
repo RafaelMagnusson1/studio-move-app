@@ -15,7 +15,7 @@ class PatientSchemalist(BaseModel):
 
 
 class SessionReportSchema(BaseModel):
-    paciente: PatientSchema
+    paciente_id: int
     data_atendimento: str
     professor: str
     relatorio: str
